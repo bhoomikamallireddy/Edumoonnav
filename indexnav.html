@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edumoon navbar</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <header class="primary_header">
+      <div class="navbar">
+            
+          <div class="logo"><a href="#" target="_self"><img src="EDumoonwhite logo.jpg" alt="Edumoon logo" height="105" width="148"></a></div>
+        
+          <ul class="navlink_items">
+            <li><a href="#">Events</a></li>
+            <li><a href="#">Clubs</a></li>
+            <li><a href="#">Courses</a></li>
+            <li><a href="#">Tutions</a></li>
+            <li><a href="#">About us</a></li>  
+            <li><button class="action_btn"><a href="https://play.google.com/store/apps/details?id=com.edumoon.learners&hl=en&gl=US" target="_blank">Download App</a></button></li>
+          </ul>
+          <input type="checkbox" id="check">
+          <button class="toggle_btn" onclick="mynavFunction()">
+            <label for="check"><img id="hamburgerImg" src="menu.png" alt="bars" width="50"></label>
+          </button>
+       </div>
+      <div class=" hamburger show-hamburger " id="hamburger">
+        <ul class="navlink_items">
+        <li><a href="#">Events</a></li>
+        <li><a href="#">Clubs</a></li>
+        <li><a href="#">Courses</a></li>
+        <li><a href="#">Tutions</a></li>
+        <li><a href="#">About us</a></li> 
+        <li><button class="action_btn"><a href="https://play.google.com/store/apps/details?id=com.edumoon.learners&hl=en&gl=US" target="_blank">Download App</a></button></li>
+       </ul> 
+      </div>
+    </header>
+    
+   <script>
+             function mynavFunction() {
+         var hamburger = document.getElementById("hamburger");
+         var hamburgerImg = document.getElementById("hamburgerImg");
+
+          hamburger.classList.toggle("show-hamburger");
+          hamburger.classList.toggle("slide-down");
+
+         if (hamburger.classList.contains("show-hamburger")) {
+            hamburgerImg.src = "x-button.png";
+          } else {
+            hamburgerImg.src = "menu.png";
+          }
+          if (hamburger.classList.contains("show-hamburger")) {
+            hamburgerImg.src = "x-button.png";
+            hamburgerImg.style.transform = "scale(0.6)";
+          } else {
+            hamburgerImg.src = "menu.png";
+            hamburgerImg.style.transform = "scale(1)";
+          }
+       
+       }
+ 
+   </script>
+  <!--if (hamburger.style.display === "none") {
+    hamburger.style.display = "block";
+ } else {
+    hamburger.style.display = "none";}
+hamburger.classList.toggle("show-hamburger");
+hamburger.classList.toggle("slide-down");
+
+var hamburgerImg = document.getElementById("hamburgerImg");
+if (hamburgerImg.src.includes("menu.png")) {
+  hamburgerImg.src = "x-button.png";
+} 
+else {
+  hamburgerImg.src = "menu.png";
+}
+hamburgerImg.classList.toggle("rotate");--> 
+</body>
+</html>
